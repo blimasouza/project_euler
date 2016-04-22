@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    746017,      20868]
-NotebookOptionsPosition[    733940,      20465]
-NotebookOutlinePosition[    734298,      20481]
-CellTagsIndexPosition[    734255,      20478]
+NotebookDataLength[    747830,      20922]
+NotebookOptionsPosition[    735515,      20511]
+NotebookOutlinePosition[    735873,      20527]
+CellTagsIndexPosition[    735830,      20524]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -20233,7 +20233,7 @@ Cell[BoxData["45228"], "Output",
    3.6702354185570583`*^9, 3.6702354395325813`*^9}, 3.6702356243175917`*^9, 
    3.670235683899867*^9}]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -20460,7 +20460,53 @@ Cell[BoxData["55"], "Output",
    3.6508241428816643`*^9, {3.6508243186525593`*^9, 3.650824333174787*^9}, 
    3.650824755141656*^9}]
 }, Open  ]]
-}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 36 - Double-base palindromes", "Section",
+ CellChangeTimes->{{3.6702520574159527`*^9, 3.6702520681861963`*^9}}],
+
+Cell[TextData[{
+ "The decimal number, 585 = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["1001001001", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (binary), is palindromic in both bases.\nFind the sum of all numbers, less \
+than one million, which are palindromic in base 10 and base 2.\n(Please note \
+that the palindromic number, in either base, may not include leading zeros.)"
+}], "Text",
+ CellChangeTimes->{
+  3.670252084927898*^9, {3.670252892720793*^9, 3.6702528951444597`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Position", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"PalindromeQ", "[", "#", "]"}], "\[And]", 
+        RowBox[{"PalindromeQ", "[", 
+         RowBox[{"FromDigits", "[", 
+          RowBox[{"IntegerDigits", "[", 
+           RowBox[{"#", ",", "2"}], "]"}], "]"}], "]"}]}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       SuperscriptBox["10", "6"], "]"}]}], ",", "True"}], "]"}], "//", 
+   "Flatten"}], "//", "Total"}]], "Input",
+ CellChangeTimes->{{3.670252269262251*^9, 3.670252313185391*^9}, {
+  3.670252409455902*^9, 3.670252420740486*^9}, {3.670301622766019*^9, 
+  3.6703016651810913`*^9}, {3.67030170435857*^9, 3.670301787021796*^9}}],
+
+Cell[BoxData["872187"], "Output",
+ CellChangeTimes->{{3.67030162428552*^9, 3.6703016657311*^9}, 
+   3.670301752680746*^9, 3.670301793679319*^9}]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 601},
@@ -20842,9 +20888,9 @@ Cell[CellGroupData[{
 Cell[724511, 20198, 1036, 30, 46, "Input"],
 Cell[725550, 20230, 202, 3, 28, "Output"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[725801, 20239, 124, 1, 64, "Section"],
+Cell[725801, 20239, 124, 1, 50, "Section"],
 Cell[725928, 20242, 610, 11, 125, "Text"],
 Cell[726541, 20255, 2530, 66, 227, "Input"],
 Cell[CellGroupData[{
@@ -20868,7 +20914,15 @@ Cell[CellGroupData[{
 Cell[733230, 20443, 470, 12, 28, "Input"],
 Cell[733703, 20457, 197, 3, 28, "Output"]
 }, Open  ]]
-}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[733949, 20466, 125, 1, 50, "Section"],
+Cell[734077, 20469, 503, 11, 70, "Text"],
+Cell[CellGroupData[{
+Cell[734605, 20484, 723, 18, 56, "Input"],
+Cell[735331, 20504, 144, 2, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
